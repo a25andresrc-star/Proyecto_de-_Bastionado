@@ -1,0 +1,8 @@
+#Ponemos por defecto que el usuario se bloquee si no se usa durante 30
+useradd -D -f 30
+#Establecemos la misma norma en usuarios ya creados. hay que hacerlo manualmente
+chage --inactive 30 root
+#Observamos si la norma esta activada
+useradd -D | grep INACTIVE
+#Observamos si los usuarios tienen establecido el tiempo.
+grep -E ^[^:]+:[^\!*] /etc/shadow | cut -d: -f1,7
