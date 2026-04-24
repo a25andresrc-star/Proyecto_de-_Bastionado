@@ -1,0 +1,17 @@
+#Acciones a realizar para que solo el root pueda acceder al archivo, y solo para lectura
+┌──(root㉿kali)-[~]
+└─# chmod 400 /boot/grub/grub.cfg 
+                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# stat /boot/grub/grub.cfg
+  File: /boot/grub/grub.cfg
+  Size: 5582            Blocks: 16         IO Block: 4096   regular file
+Device: 8,1     Inode: 4063587     Links: 1
+Access: (0400/-r--------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2025-12-02 22:03:11.105176576 -0500
+Modify: 2025-12-02 22:03:11.107389609 -0500
+Change: 2026-04-24 07:23:22.196501693 -0400
+ Birth: 2025-12-02 22:03:11.105176576 -0500
+                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# 
