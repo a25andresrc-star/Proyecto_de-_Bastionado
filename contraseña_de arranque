@@ -1,3 +1,4 @@
+#/etc/grub.d/init-pwd
 cat <<EOF
 set superuser="root"
 password_pbkdf2 root grub.pbkdf2.sha512.10000.8AD2E2B24CBE00054C63FD528DFCC72D27EFAB4A3CA0AD7642F4E43815E1B6DF1768>
