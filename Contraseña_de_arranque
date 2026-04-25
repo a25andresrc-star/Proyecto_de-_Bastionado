@@ -1,0 +1,46 @@
+#Procedimiento para establecer la contraseña de arranque
+(root㉿kali)-[/etc/grub.d]
+└─# grub-mkpasswd-pbkdf2         
+Enter password: 
+Reenter password: 
+PBKDF2 hash of your password is grub.pbkdf2.sha512.10000.8AD2E2B24CBE00054C63FD528DFCC72D27EFAB4A3CA0AD7642F4E43815E1B6DF176803F06897E45002030D425632218FAA61A12DC5094062838D1246204E6579.D6425141FC04DBC1672B3DBB72285D99419E1C26416710B50056A07B95C10EAFECD32266736E1EB8AFC2229F10D65A359A650EFED69629D90DC63A52A99A39B9
+                                                                                                                   
+┌──(root㉿kali)-[/etc/grub.d]
+└─# nano init-pwd   
+                                                                                                                   
+┌──(root㉿kali)-[/etc/grub.d]
+└─# chmod +x init-pwd
+                                                                                                                   
+┌──(root㉿kali)-[/etc/grub.d]
+└─# ls -l
+total 92
+-rwxr-xr-x 1 root root 10080 Jul 17  2025 00_header
+-rwxr-xr-x 1 root root  6400 Jul 17  2025 05_debian_theme
+-rwxr-xr-x 1 root root 13856 Jul 17  2025 10_linux
+-rwxr-xr-x 1 root root 14513 Jul 17  2025 20_linux_xen
+-rwxr-xr-x 1 root root   786 Jul 17  2025 25_bli
+-rwxr-xr-x 1 root root 13183 Jul 17  2025 30_os-prober
+-rwxr-xr-x 1 root root  1174 Jul 17  2025 30_uefi-firmware
+-rwxr-xr-x 1 root root   214 Jul 17  2025 40_custom
+-rwxr-xr-x 1 root root   215 Jul 17  2025 41_custom
+-rwxrwxr-x 1 root root   335 Apr 25 13:50 init-pwd
+-rw-r--r-- 1 root root   483 Jul 17  2025 README
+                                                                                                                   
+┌──(root㉿kali)-[/etc/grub.d]
+└─# update-grub
+Generating grub configuration file ...
+Found theme: /boot/grub/themes/kali/theme.txt
+Found background image: /usr/share/images/desktop-base/desktop-grub.png
+Found linux image: /boot/vmlinuz-6.16.8+kali-amd64
+Found initrd image: /boot/initrd.img-6.16.8+kali-amd64
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+                                                                                                                   
+┌──(root㉿kali)-[/etc/grub.d]
+└─# passwd
+New password: 
+Retype new password: 
+passwd: password updated successfully
