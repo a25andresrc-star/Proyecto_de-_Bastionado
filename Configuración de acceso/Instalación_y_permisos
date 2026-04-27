@@ -1,0 +1,8 @@
+┌──(kali㉿kali)-[~]
+└─$ sudo apt install openssh-server 
+┌──(kali㉿kali)-[~]
+└─$ sudo chmod 600 /etc/ssh/sshd_config
+┌──(kali㉿kali)-[~]
+└─$ ls -la /etc/ssh/sshd_config 
+-rw------- 1 root root 3424 Oct 17  2025 /etc/ssh/sshd_config
+ 
